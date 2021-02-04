@@ -6,6 +6,7 @@ using System.Globalization;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Web;
 
 namespace _192363C_SITConnect
 {
@@ -21,12 +22,9 @@ namespace _192363C_SITConnect
 
         byte[] IV;
 
-        // Keep password value after postback
         protected void Page_Load(object sender, EventArgs e)
         {
-            string pwd = tbPassword.Text;
 
-            tbPassword.Attributes.Add("value", pwd);
         }
 
         // Uses parameterized query to prevent SQL Injection

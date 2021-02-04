@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Web;
 
 namespace _192363C_SITConnect
 {
@@ -30,17 +31,6 @@ namespace _192363C_SITConnect
                 Response.Redirect("403.html", false);
             }
 
-            string pwd = tbOldPassword.Text;
-
-            tbOldPassword.Attributes.Add("value", pwd);
-
-            string new_pwd = tbNewPassword.Text;
-
-            tbNewPassword.Attributes.Add("value", new_pwd);
-
-            string confirm_pwd = tbConfirmPassword.Text;
-
-            tbConfirmPassword.Attributes.Add("value", confirm_pwd);
         }
 
         // Incrementing score based on strong password requirements met
